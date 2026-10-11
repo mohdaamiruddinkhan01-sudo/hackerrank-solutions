@@ -7,6 +7,12 @@
 // Language    c
 // Status      Accepted
 // Submitted   2026-10-11, 07:47 p.m.
+// Technique   iterative-conditional-mapping
+// Time        O(b - a)
+// Space       O(1)
+// Insight     The implementation iterates through the inclusive range [a, b] and applies conditional logic to map integers 1-9 to their English names or classify integers greater than 9 as even or odd.
+// Interview   Before: "I would use a series of if-else statements to handle the range and parity checks." After: "I implemented an O(b - a) loop that maps 1-9 using an array index and uses modulo arithmetic for numbers greater than 9, ensuring all constraints are met."
+// Pitfalls    (1) Accessing the words array with index i instead of i-1, which causes an off-by-one error for the English representation.  (2) Failing to handle the inclusive range [a, b] by using i < b instead of i <= b in the loop condition.  (3) Neglecting to check the i >= 1 condition, which could lead to out-of-bounds access if the input range includes non-positive integers.
 // ──────────────────────────────────────────────────
 
 #include <stdio.h>
