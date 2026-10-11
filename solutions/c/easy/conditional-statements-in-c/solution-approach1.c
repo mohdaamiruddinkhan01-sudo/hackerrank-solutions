@@ -7,6 +7,12 @@
 // Language    c
 // Status      Accepted
 // Submitted   2026-10-11, 08:05 p.m.
+// Technique   if-else-ladder-mapping
+// Time        O(1)
+// Space       O(1)
+// Insight     The implementation maps each integer from one to nine to its corresponding English word using a sequential conditional ladder, defaulting to a specific string for any value greater than nine.
+// Interview   Before: "I would use a switch statement or an array of strings to handle these mappings." After: "Using an if-else ladder provides O(1) time complexity, which is optimal for this range, while correctly handling the 'Greater than 9' requirement for inputs outside the 1-9 range."
+// Pitfalls    (1) Failing to handle the 'Greater than 9' case explicitly as required by the problem statement.  (2) Incorrectly assuming the input is always a single digit, ignoring the requirement to print 'Greater than 9' for larger integers.  (3) Using an incorrect string literal for the English word representation of the integer.
 // ──────────────────────────────────────────────────
 
 #include <assert.h>
